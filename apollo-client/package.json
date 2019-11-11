@@ -1,0 +1,16 @@
+{
+  "name": "apollo-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate": "graphql-codegen"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.8.3",
+    "@graphql-codegen/typescript": "^1.8.3"
+  },
+  "dependencies": {
+    "graphql": "^14.5.8"
+  }
+}
