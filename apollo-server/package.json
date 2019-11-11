@@ -14,16 +14,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^12.12.7",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
+    "prettier": "^1.19.1",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
     "nodemon": "^1.19.4",
-    "prettier": "^1.19.1",
     "typescript": "^3.7.2"
   },
   "lint-staged": {
@@ -37,7 +39,7 @@
     ]
   },
   "dependencies": {
-    "@types/graphql": "^14.5.0",
+    "express-graphql": "^0.9.0",
     "graphql": "^14.5.8",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.5"

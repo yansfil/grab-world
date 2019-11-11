@@ -1,0 +1,16 @@
+{
+  "name": "grab-world",
+  "version": "1.0.0",
+  "description": "grab's laboratory",
+  "main": "index.js",
+  "repository": "https://github.com/yansfil/grab-world.git",
+  "author": "yansfil <tansfil@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "run:server": "cd ./apollo-server && yarn start",
+    "install:server": "cd ./apollo-server && yarn add "
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  }
+}
