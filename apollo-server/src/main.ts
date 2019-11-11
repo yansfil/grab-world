@@ -1,24 +1,22 @@
 import 'reflect-metadata';
 import express from 'express';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server';
+import { buildSchema } from 'type-graphql';
+import * as path from 'path';
+import RecipeResolver from './domains/recipe/recipe.resolver';
 
-// Construct a schema, using GraphQL schema language
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-// Provide resolver functions for your schema fields
-const resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-  },
-};
-
-const server = new ApolloServer({ typeDefs, resolvers });
-
-const app = express();
-server.applyMiddleware({ app });
-
-app.listen({ port: 4000 }, () => console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`));
+async function initializeServer() {
+  const schema = await buildSchema({
+    resolvers: [RecipeResolver],
+    // automatically create `schema.gql` file with schema definition in current folder
+    emitSchemaFile: path.resolve(__dirname, 'schema.gql'),
+  });
+  const server = new ApolloServer({
+    schema,
+    playground: true,
+  });
+  // Start the server
+  const { url } = await server.listen(4000);
+  console.log(`Server is running, GraphQL Playground available at ${url}`);
+}
+initializeServer();
