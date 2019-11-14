@@ -52,3 +52,14 @@ export type RecipeInput = {
   title: Scalars['String'],
   description?: Maybe<Scalars['String']>,
 };
+
+export type GetRecipesQueryVariables = {};
+
+
+export type GetRecipesQuery = (
+  { __typename?: 'Query' }
+  & { recipes: Array<(
+    { __typename?: 'Recipe' }
+    & Pick<Recipe, 'id'>
+  )> }
+);

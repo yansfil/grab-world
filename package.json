@@ -7,7 +7,7 @@
   "author": "yansfil <tansfil@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn && cd ./apollo-server && yarn",
+    "install": "yarn && cd ./apollo-server && yarn",
     "run:server": "cd ./apollo-server && yarn start",
     "install:server": "cd ./apollo-server && yarn add "
   },

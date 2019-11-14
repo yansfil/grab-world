@@ -1,5 +1,7 @@
 schema: http://localhost:4000/graphql
+documents: ./query/*.tsx
 generates:
   ./src/types.d.ts:
     plugins:
       - typescript
+      - typescript-operations

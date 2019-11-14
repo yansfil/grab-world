@@ -511,7 +511,17 @@
     import-from "3.0.0"
     tslib "1.10.0"
 
-"@graphql-codegen/typescript@^1.8.3":
+"@graphql-codegen/typescript-operations@1.8.3":
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-operations/-/typescript-operations-1.8.3.tgz#8be109d474528c21a4f0420d36278f8d1009365c"
+  integrity sha512-35nmisibtnp/aO/X6oBJiWy9ysuKFvU2fsf1XEtKFqntIm5TC9cWMYX0wzgHB5XnJvFSy1JrF5882cjRVQrp4g==
+  dependencies:
+    "@graphql-codegen/plugin-helpers" "1.8.3"
+    "@graphql-codegen/typescript" "1.8.3"
+    "@graphql-codegen/visitor-plugin-common" "1.8.3"
+    tslib "1.10.0"
+
+"@graphql-codegen/typescript@1.8.3":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-1.8.3.tgz#600c2d7931f8a5433919dea5483adb9ba0aba65b"
   integrity sha512-Hw8b/iu/ZEAK22G3YmU//98jfmYN835ZPAx3w4c/reeMv4syfAoUlXrSKCbvfi/TOzVRzK/FjYKa0h5dKMoyPA==
@@ -3571,6 +3581,11 @@ type-fest@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.5.2.tgz#d6ef42a0356c6cd45f49485c3b6281fc148e48a2"
   integrity sha512-DWkS49EQKVX//Tbupb9TFa19c7+MK1XmzkrZUR8TAktmE/DizXoaoJV6TZ/tSIPXipqNiRI6CyAe7x69Jb6RSw==
+
+typescript@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
+  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
 
 ua-parser-js@^0.7.18:
   version "0.7.20"
