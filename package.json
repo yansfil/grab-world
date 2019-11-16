@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "grab's laboratory",
   "main": "index.js",
+  "private": true,
   "repository": "https://github.com/yansfil/grab-world.git",
   "author": "yansfil <tansfil@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "install": "yarn && cd ./apollo-server && yarn",
-    "run:server": "cd ./apollo-server && yarn start",
-    "install:server": "cd ./apollo-server && yarn add "
+    "run:server": "cd packages/apollo-server && yarn start",
+    "install:server": "cd packages/apollo-server && yarn add "
   },
   "devDependencies": {
+    "lerna": "^3.18.4",
     "prettier": "^1.19.1"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   }
 }

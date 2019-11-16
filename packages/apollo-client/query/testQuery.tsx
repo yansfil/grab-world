@@ -5,7 +5,7 @@ const RECIPES_TITLE = gql`
         recipes {
             id
         }
-    }
+    }   
 `;
 
 export default RECIPES_TITLE;
