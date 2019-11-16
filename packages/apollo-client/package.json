@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
-    "generate": "graphql-codegen"
+    "generate": "graphql-codegen",
+    "test": "jest"
   },
   "dependencies": {
     "react": "^16.12.0",
@@ -13,10 +14,27 @@
     "graphql": "^14.5.8",
     "typescript": "^3.7.2"
   },
+
   "devDependencies": {
     "@graphql-codegen/cli": "^1.8.3",
     "@graphql-codegen/typescript": "1.8.3",
-    "@graphql-codegen/typescript-operations": "1.8.3"
+    "@graphql-codegen/typescript-operations": "1.8.3",
+    "ts-jest": "^24.1.0",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
   },
   "eslintConfig": {
     "extends": "react-app"

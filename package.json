@@ -8,10 +8,12 @@
   "author": "yansfil <tansfil@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "initialize": "lerna bootstrap",
     "dev": "lerna bootstrap && lerna run --parallel dev",
     "run:server": "cd packages/apollo-server && yarn start",
     "install:client": "lerna add --scope=\"@grab-world/apollo-client\" ",
-    "install:server": "lerna add --scope=\"@grab-world/apollo-server\" "
+    "install:server": "lerna add --scope=\"@grab-world/apollo-server\" ",
+    "test" : "lerna run test"
   },
   "devDependencies": {
     "nodemon": "^1.19.4",
@@ -22,6 +24,8 @@
     "husky": "^3.0.9",
     "prettier": "^1.19.1",
     "lint-staged": "^9.4.2",
+    "ts-jest": "^24.1.0",
+    "jest": "^24.9.0",
     "@class101/eslint-config": "^2.2.1",
     "@types/jest": "^24.0.22",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
@@ -29,9 +33,7 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-import": "^2.18.2",
-    "ts-jest": "^24.1.0",
-    "jest": "^24.9.0"
+    "eslint-plugin-import": "^2.18.2"
   },
   "workspaces": {
     "packages": [
@@ -40,6 +42,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lerna run --scope @grab-world/task-tools pre-commit",
       "pre-push": "lerna run --scope @grab-world/task-tools pre-push"
     }
   },
