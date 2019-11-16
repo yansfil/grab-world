@@ -1,0 +1,11 @@
+{
+  "name": "@grab-world/task-tools",
+  "version": "1.0.0",
+  "description": "task tools",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "pre-commit": "lint-staged",
+    "pre-push": "bash ./scripts/git-hooks/prepush.sh"
+  }
+}

@@ -14,15 +14,43 @@
     "install:server": "lerna add --scope=\"@grab-world/apollo-server\" "
   },
   "devDependencies": {
+    "nodemon": "^1.19.4",
+    "typescript": "^3.7.2",
     "lerna": "^3.18.4",
-    "prettier": "^1.19.1"
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^12.12.7",
+    "husky": "^3.0.9",
+    "prettier": "^1.19.1",
+    "lint-staged": "^9.4.2",
+    "@class101/eslint-config": "^2.2.1",
+    "@types/jest": "^24.0.22",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "ts-jest": "^24.1.0",
+    "jest": "^24.9.0"
   },
   "workspaces": {
     "packages": [
       "packages/*"
     ]
   },
-  "resolutions": {
-    "mem" : "^6.0.0"
+  "husky": {
+    "hooks": {
+      "pre-push": "lerna run --scope @grab-world/task-tools pre-push"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,md}": [
+      "prettier --write --loglevel warn",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
