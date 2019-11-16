@@ -1,5 +1,5 @@
 {
-  "name": "apollo-client",
+  "name": "@grab-world/apollo-client",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

@@ -8,8 +8,10 @@
   "author": "yansfil <tansfil@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "lerna bootstrap && lerna run --parallel dev",
     "run:server": "cd packages/apollo-server && yarn start",
-    "install:server": "cd packages/apollo-server && yarn add "
+    "install:client": "lerna add --scope=\"@grab-world/apollo-client\" ",
+    "install:server": "lerna add --scope=\"@grab-world/apollo-server\" "
   },
   "devDependencies": {
     "lerna": "^3.18.4",
