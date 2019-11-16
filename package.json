@@ -19,5 +19,8 @@
     "packages": [
       "packages/*"
     ]
+  },
+  "resolutions": {
+    "mem" : "^6.0.0"
   }
 }
