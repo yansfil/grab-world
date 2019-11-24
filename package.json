@@ -8,7 +8,7 @@
   "author": "yansfil <tansfil@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "initialize": "lerna bootstrap",
+    "bootstrap": "yarn && lerna bootstrap",
     "dev": "lerna bootstrap && lerna run --parallel dev",
     "run:server": "cd packages/apollo-server && yarn start",
     "install:client": "lerna add --scope=\"@grab-world/apollo-client\" ",
