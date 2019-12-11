@@ -1,5 +1,5 @@
 schema: http://localhost:4000/graphql
-documents: ./src/graphql-documents/**/*.tsx
+documents: ./src/graphql-documents/**/*[!.gen].tsx
 generates:
   src/graphql-documents/types.ts:
     - typescript
@@ -11,3 +11,7 @@ generates:
     plugins:
       - typescript-operations
       - typescript-react-apollo
+    config:
+      withComponent: false
+      withHooks: true
+      withHOC: false

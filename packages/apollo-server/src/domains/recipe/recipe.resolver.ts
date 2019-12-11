@@ -1,11 +1,13 @@
-import {Resolver, Query, FieldResolver, Arg, Root, Mutation, Int, ResolverInterface} from 'type-graphql';
+import { Resolver, Query, FieldResolver, Arg, Root, Mutation, Int, ResolverInterface } from 'type-graphql';
 
 import Recipe from './recipe.type';
-import RecipeInput from "./recipe.input";
+import RecipeInput from './recipe.input';
 
 @Resolver(of => Recipe)
 export default class RecipeResolver implements ResolverInterface<Recipe> {
-  private readonly items: Recipe[] = [];
+  private readonly items: Recipe[] = [
+    { id: '1', title: 'sample', creationDate: new Date(), ratingsCount: 5, ingredients: ['pepper', 'banana'] },
+  ];
 
   @Query(returns => Recipe, { nullable: true })
   async recipe(@Arg('title') title: string): Promise<Recipe | undefined> {

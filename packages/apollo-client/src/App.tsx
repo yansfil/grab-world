@@ -5,6 +5,7 @@ import { NODE_ENV } from 'constants/env';
 import { ApolloProvider } from '@apollo/react-hooks';
 import './App.css';
 import {apolloClient} from 'config/configApolloClient'
+import HooksQueryPage from 'pages/HooksQueryPage'
 function App() {
   return (
     <ApolloProvider client={apolloClient}>
@@ -15,6 +16,7 @@ function App() {
           <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
             Learn React
           </a>
+          <HooksQueryPage />
         </header>
       </div>
     </ApolloProvider>
